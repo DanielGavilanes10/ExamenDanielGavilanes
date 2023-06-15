@@ -17,7 +17,7 @@ import jakarta.persistence.TemporalType;
 public class OfiSede {
     @Id
     @Column(name = "COD_SEDE", length = 8, nullable = false)
-    private Long codSede;
+    private String codSede;
 
     @Column(name = "COD_INSTITUCION", nullable = false)
     private Integer codInstitucion;
@@ -45,15 +45,17 @@ public class OfiSede {
     public OfiSede() {
         
     }
-    public OfiSede(Long codSede) {
+
+    public OfiSede(String codSede) {
         this.codSede = codSede;
     }
+    
 
-    public Long getCodSede() {
+    public String getCodSede() {
         return codSede;
     }
 
-    public void setCodSede(Long codSede) {
+    public void setCodSede(String codSede) {
         this.codSede = codSede;
     }
 
